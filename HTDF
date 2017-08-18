@@ -1,0 +1,29 @@
+HTDF - How to Design FUnctions
+
+Signature, purpose and stub.
+Define examples, wrap each in check-expect.
+Template and inventory.
+Code the function body.
+Test and debug until correct
+
+; 
+; PROBLEM:
+; 
+; Design a function that consumes a number and produces twice that number. 
+; Call your function double. Follow the HtDF recipe and leave behind commented 
+; out versions of the stub and template.
+; 
+
+
+;; Number -> Number
+;; produces 2 times the given number
+(check-expect (double 3) 6)
+(check-expect (double 4.2) 8.4)
+
+; (define (double n) 0)  ; this is the stub
+
+;(define (double n)
+;  (...n))
+
+(define (double n)
+  (* 2 n))
