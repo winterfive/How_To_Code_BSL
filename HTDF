@@ -51,3 +51,28 @@ Test and debug until correct
 
 (define (tall? img)
   (> (image-height img)(image-width img)))
+  
+  
+  
+;; HTDF Assignment
+
+(require 2htdp/image)
+
+;; Image Image -> Boolean
+;; Return true if 1st image is larger then the 2nd image
+
+(check-expect (larger? (rectangle 4 5 "solid" "blue")
+                       (rectangle 2 3 "solid" "red")) true)
+(check-expect (larger? (rectangle 2 3 "solid" "red")
+                       (square 4 "solid" "blue")) false)
+(check-expect (larger? (rectangle 2 3 "solid" "red")
+                       (rectangle 2 3 "solid" "blue")) false)
+
+;(define (larger? img1 img2) false)      ; stub
+
+;(define (larger? img1 img2)           ; template
+;  (...img1 img2))
+
+(define (larger? img1 img2)
+  (> (* (image-width img1) (image-height img1))
+     (* (image-width img2) (image-height img2))))
