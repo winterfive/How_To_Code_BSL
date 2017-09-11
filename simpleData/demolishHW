@@ -1,0 +1,63 @@
+
+;; demolish-starter.rkt
+
+;; =================
+;; Data definitions:
+
+; 
+; PROBLEM A:
+; 
+; You are assigned to develop a system that will classify 
+; buildings in downtown Vancouver based on how old they are. 
+; According to city guidelines, there are three different classification levels:
+; new, old, and heritage.
+; 
+; Design a data definition to represent these classification levels. 
+; Call it BuildingStatus.
+; 
+
+
+;; BuildingStatus is one of:
+;; - "new"
+;; - "old"
+;; - "heritage"
+
+;; interp: classification of building based on age
+;; examples reduntant in enumeration
+
+;; (define (demolish? bs) true)
+
+;; Template rules used:
+;;  - one fo 3 cases:
+;; - atomic non-distinct: "new"
+;; - atomic non-disctinct: "old"
+;; - atmoic non-distinct: "heritage"
+
+;; =================
+;; Functions:
+
+; 
+; PROBLEM B:
+; 
+; The city wants to demolish all buildings classified as "old". 
+; You are hired to design a function called demolish? 
+; that determines whether a building should be torn down or not.
+; 
+
+
+;; bs -> boolean
+;; evaluate if building's age requires it to be demolished (true, false)
+
+(check-expect (demolish? "new") false)
+(check-expect (demolish? "old") true)
+(check-expect (demolish? "heritage") false)
+
+;; (define (demolish? bs) true)
+
+;; (define (demolish? bs) true)
+;; <tempalte used from BuldingStatus>
+
+(define (demolish? bs)
+  (cond [(string=? bs "new") false]
+        [(string=? bs "old") true]
+        [(string=? bs "heritage") false]))
