@@ -1,4 +1,4 @@
-# How_To_Code_BSL
+# how-to-code-UBCx
 Assigments from various Software Development Courses from Univ. of British Columbia's (UBCx)
 
 Courses include:
